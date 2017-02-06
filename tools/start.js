@@ -71,6 +71,7 @@ async function start() {
       bs.init({
         ...isDebug ? {} : { notify: false, ui: false },
 
+        open: false,
         proxy: {
           target: server.host,
           middleware: [wpMiddleware, hotMiddleware],
