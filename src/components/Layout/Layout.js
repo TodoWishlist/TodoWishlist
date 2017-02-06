@@ -9,7 +9,8 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Layout.css';
+import styles from './Layout.css';
+
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
@@ -22,13 +23,16 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        {this.props.children}
-        <Feedback />
-        <Footer />
+        <div className={styles.supremeContainer}>
+          <Header />
+          <div className={styles.container}>
+            {this.props.children}
+          </div>
+          <Footer />
+        </div>
       </div>
     );
   }
 }
 
-export default withStyles(s)(Layout);
+export default withStyles(styles)(Layout);

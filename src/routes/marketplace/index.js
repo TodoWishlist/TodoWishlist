@@ -8,18 +8,19 @@
  */
 
 import React from 'react';
-import Home from './Home';
-import fetch from '../../core/fetch';
 import Layout from '../../components/Layout';
+import Marketplace from './Marketplace';
+
+const title = 'Marketplace';
 
 export default {
 
-  path: '/',
+  path: '/marketplace',
 
-  async action() {
+  action() {
     return {
-      title: 'Todo&Wish make you easy',
-      component: <Layout><Home /></Layout>,
+      title,
+      component: <Layout><Marketplace title={title} /></Layout>,
     };
   },
 
