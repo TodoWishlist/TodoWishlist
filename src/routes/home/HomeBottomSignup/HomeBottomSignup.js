@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './HomeBottomSignup.css';
+import styles from './HomeBottomSignup.css';
 import SignupForm from '../components/SignupForm/SignupForm';
 
 class HomeBottomSignup extends Component {
@@ -11,12 +11,14 @@ class HomeBottomSignup extends Component {
 
   render() {
     return (
-      <section className={s.BottomSignupWrapper}>
-        <h1 className={s.header} >Get start now</h1>
-        <SignupForm dataSet={this.state} />
+      <section className={styles.BottomSignupWrapper}>
+        <div className={styles.rowContent}>
+          <h1 className={styles.header} >Get start now</h1>
+          <SignupForm dataSet={this.state} />
+        </div>
       </section>
     );
   }
 }
 
-export default withStyles(s)(HomeBottomSignup);
+export default withStyles(styles)(HomeBottomSignup);

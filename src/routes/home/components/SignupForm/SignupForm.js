@@ -6,6 +6,8 @@ const SignupForm = ({ dataSet }) => {
   const flex = dataSet.position === 'top' ? { display: 'flex', flexDirection: 'row' } : { display: 'flex', flexDirection: 'column' };
   const width = dataSet.position === 'top' ? { width: '48.5%' } : { width: '100%' };
   const legalColor = dataSet.position === 'top' ? { color: 'white' } : { color: '#3d464d' };
+  const lineColor = dataSet.position === 'top' ? { background: 'rgba(255, 255, 255, 0.5)' } : { background: 'rgba(0, 0, 0, 0.5)' };
+  const orColor = dataSet.position === 'top' ? { color: 'rgba(255, 255, 255, 0.8)' } : { color: 'rgba(0, 0, 0, 0.8)' };
   return (
     <div className={styles.signupForm}>
       <form action="#">
@@ -32,9 +34,9 @@ const SignupForm = ({ dataSet }) => {
           </button>
         </div>
         <div className={styles.orDivider}>
-          <span className={styles.line} />
-          <span className={styles.text}>or</span>
-          <span className={styles.line} />
+          <span className={styles.line} style={lineColor} />
+          <span className={styles.text} style={orColor}>or</span>
+          <span className={styles.line} style={lineColor} />
         </div>
         <div>
           <p>

@@ -10,8 +10,10 @@
 
 .BottomSignupWrapper {
   width: 100%;
+  padding-bottom: 20px;
+}
+
+.rowContent {
   max-width: 990px;
   margin: 0 auto;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #d0d4d9;
 }

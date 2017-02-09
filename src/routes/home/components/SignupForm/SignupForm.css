@@ -54,7 +54,6 @@
   float: left;
   width: 43%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.3);
 }
 
 .orDivider .text {
@@ -65,7 +64,6 @@
   display: block;
   float: left;
   width: 14%;
-  color: #fff;
 }
 
 /* begin: google button */
