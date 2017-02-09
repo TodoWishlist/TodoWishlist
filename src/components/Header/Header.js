@@ -14,6 +14,7 @@ class Header extends Component {
     this.state = {
       isOpen: false,
     };
+    this.toggle = this.toggle.bind(this);
   }
   toggle() {
     this.setState({
@@ -22,10 +23,10 @@ class Header extends Component {
   }
   render() {
     return (
-      <div>
-        <Navbar color="faded" fixed="top" light toggleable>
-          <NavbarToggler right onClick={::this.toggle} />
-          <NavbarBrand href="/">&#9774; Todo&Wish</NavbarBrand>
+      <header>
+        <Navbar color="faded" light toggleable>
+          <NavbarToggler right onClick={this.toggle} />
+          <NavbarBrand href="/" style={{ color: '#d85f5f' }}>&#9774; Todo&Wish</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
@@ -43,7 +44,7 @@ class Header extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
+      </header>
     );
   }
 }

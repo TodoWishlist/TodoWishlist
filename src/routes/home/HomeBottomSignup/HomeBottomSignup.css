@@ -4,9 +4,8 @@
   line-height: 48px;
   line-height: 3rem;
   text-align: center;
-  /*color: #fff ;*/
   -webkit-font-smoothing: antialiased;
-  margin: 40px 40px;
+  margin: 40px;
 }
 
 .BottomSignupWrapper {
