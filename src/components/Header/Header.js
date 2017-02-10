@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 // const Links = () =>
 //   <nav>
@@ -13,12 +14,19 @@ class Header extends Component {
     super(props);
     this.state = {
       isOpen: false,
+      modal: false
     };
     this.toggle = this.toggle.bind(this);
+    this.signinToggle = this.signinToggle.bind(this);
   }
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
+    });
+  }
+  signinToggle() {
+    this.setState({
+      modal: !this.state.modal
     });
   }
   render() {
@@ -39,11 +47,24 @@ class Header extends Component {
                 <NavLink href="#">Sign Up</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Log In</NavLink>
+                <NavLink href="#" onClick={this.signinToggle}>Log In</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
+        <Modal isOpen={this.state.modal} toggle={this.signinToggle}>
+          <ModalHeader toggle={this.signinToggle}>Log in</ModalHeader>
+          <ModalBody>
+            <form>
+              <div>Log in</div>
+              <div>Password</div>
+              <div>remember</div>
+            </form>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={this.signinToggle}>Log in</Button>
+          </ModalFooter>
+        </Modal>
       </header>
     );
   }
