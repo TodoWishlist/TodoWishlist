@@ -49,4 +49,8 @@ const FooterNav = ({ dataSet }) => (
   </div>
 );
 
+FooterNav.propTypes = {
+  dataSet: React.PropTypes.object.isRequired,
+};
+
 export default withStyles(styles)(FooterNavs);
