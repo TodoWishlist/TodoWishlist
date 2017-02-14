@@ -1,5 +1,17 @@
 .cardWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around
+  justify-content: space-around;
+}
+
+.buttonColor {
+  color: #fff;
+  background-color: #d85f5f;
+  border-color: #d85f5f;
+}
+
+.buttonColor:hover {
+  color: #fff !important;
+  background-color: #ee7272;
+  border-color: rgba(0, 0, 0, 0.2);
 }

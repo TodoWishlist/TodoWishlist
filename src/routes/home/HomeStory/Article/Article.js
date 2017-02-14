@@ -7,7 +7,7 @@ const Article = ({ dataSet }) => {
   return (
     <article className={styles.articleWrapper} style={flex}>
       <div className={styles.storyImageWrapper}>
-        <div className={styles.storyImage} style={{ backgroundImage: `url(${dataSet.image})` }}></div>
+        <div className={styles.storyImage} style={{ backgroundImage: `url(${dataSet.image})` }} />
       </div>
       <div className={styles.storyContentWrapper}>
         <div className={styles.storyContent}>

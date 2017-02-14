@@ -11,6 +11,7 @@ class ExpandingHowToUse extends Component {
     this.state = {
       collapse: false,
     };
+    this.toggle = this.toggle.bind(this);
   }
 
   toggle = () => {
@@ -21,12 +22,12 @@ class ExpandingHowToUse extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center', marginTop: '10px' }}>
-        <Button color="primary" onClick={::this.toggle} style={{ marginBottom: '1rem' }}><i className="fa fa-toggle-on" aria-hidden="true"></i>Toggle</Button>
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <Button className={styles.buttonColor} onClick={this.toggle} style={{ marginBottom: '1rem' }}><i className="fa fa-toggle-on" aria-hidden="true" />Open</Button>
         <Collapse isOpen={this.state.collapse}>
           <div className={styles.cardWrapper}>
             {this.props.extendDataSet.map((data, index) =>
-              <ToggleCard key={index} extendDataSet={data} />
+              <ToggleCard key={index} extendDataSet={data} />,
             )}
           </div>
         </Collapse>
