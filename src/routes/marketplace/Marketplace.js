@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import styles from './Marketplace.css';
 
 class Marketplace extends Component {
   render() {
     return (
-      <Container>
-        <Row>
-          <Col>Marketplace</Col>
-        </Row>
-      </Container>
+      <section>
+        <div>Subtitle</div>
+        <div>Marketplace</div>
+      </section>
     );
   }
 }
