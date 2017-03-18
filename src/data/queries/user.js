@@ -13,18 +13,13 @@ import User from '../models/User';
 const user = {
   type: UserType,
   resolve() {
-    User.findOne().then(function(u) {
-	  let res = {
+    return User.findOne().then(function(u) {
+	  const res = {
         id: u.get("id"),
         email: u.get("email")
 	  };
-	  console.log(res);
-      return res; // why this result is not returned
+      return res;
     });
-
-	return {
-      id: "error"
-	}
   },
 };
 
